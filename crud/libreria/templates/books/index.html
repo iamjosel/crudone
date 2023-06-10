@@ -11,7 +11,7 @@
     <div class="card-body">
         <h4 class="card-title">Libros</h4>
         <div class="table-responsive">
-            <table class="table table-primary">
+            <table class="table table-second">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -27,7 +27,11 @@
                         <td>Django con Python</td>
                         <td>Imagen.png</td>
                         <td>Libros que hablan sobre frameworks de django</td>
-                        <td>Editar | Borrar </td>
+                        <td> 
+                            <a name="" id="" class="btn btn-info" href="{% url 'edit_book' %}" role="button">Editar</a>
+                            |
+                            <a name="" id="" class="btn btn-danger" href="" role="button">Borrar</a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
