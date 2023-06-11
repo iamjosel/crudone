@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Book
+from .forms import BookForm
 
 #Sección de acceso al sitio
 def inicio(request):
@@ -10,10 +12,12 @@ def about(request):
 
 #Sección de libros
 def books(request):
-    return render(request, 'books/index.html')
+    books = Book.objects.all()
+    return render(request, 'books/index.html', {'books': books})
 
 def create_book(request):
-    return render(request, 'books/create.html')
+    form = BookForm(request.POST or None)
+    return render(request, 'books/create.html', {'form': form})
 
 def edit_book(request):
     return render(request, 'books/edit.html')
