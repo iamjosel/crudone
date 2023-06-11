@@ -1,6 +1,6 @@
 {% load static %}
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <title>{% block titulo %}  {% endblock %}</title>
@@ -16,9 +16,9 @@
 
     <nav class="navbar navbar-expand navbar-light bg-light">
         <div class="nav navbar-nav">
-            <a class="nav-item nav-link active" href="{% url 'inicio' %}">Inicio</a>
-            <a class="nav-item nav-link active" href="{% url 'books' %}">Libros</a>
-            <a class="nav-item nav-link active" href="{% url 'about' %}">Nosotros</a>
+            <a class="nav-item nav-link active" href="{% url 'inicio' %}">Home</a>
+            <a class="nav-item nav-link active" href="{% url 'books' %}">Books</a>
+            <a class="nav-item nav-link active" href="{% url 'about' %}">About</a>
         </div>
     </nav>
 
