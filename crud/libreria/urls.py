@@ -9,4 +9,6 @@ urlpatterns = [
     path('books', views.books, name='books'),
     path('books/create', views.create_book, name='create_book'),
     path('books/edit', views.edit_book, name='edit_book'),
+    path('delete/<int:id>', views.delete_book, name='delete_book'),
+    path('edit/<int:id>', views.edit_book, name='edit_book')
 ]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
